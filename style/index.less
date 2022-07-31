@@ -1,0 +1,130 @@
+@import './fonts.less';
+@import '/style/default-styles.less';
+
+//-----------------------------------------
+// header
+.super-container {
+  width: 100%;
+  padding: 1.8em 9em;
+  border: 1px solid black;
+}
+
+@media (max-width: 700px) {
+  .super-container {
+    padding: 1.8em 2em;
+  }
+  .recent-posts__substrate {
+    left: 1.9em;
+  }
+}
+
+.header {
+  margin-bottom: 9.1em;
+}
+
+.header__nav {
+  display: flex;
+  font-weight: 500;
+  font-size: 1.25rem; //20px
+  color: black;
+}
+
+.header__nav__list {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.header__nav__item {
+  list-style-type: none;
+}
+
+.header__nav__item:nth-child(n + 2) {
+  margin-left: 2em;
+}
+
+//---------------------------------------
+// about-my-work
+
+.about-my-work {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4.375em;
+}
+
+.about-my-work__info {
+  width: 59%;
+}
+
+.about-my-work__photo {
+  width: 41%;
+  padding-left: 1em;
+  display: flex;
+}
+
+.about-my-work__photo__img {
+  width: 15.1em;
+  height: 15.1em;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: auto;
+  box-shadow: -5px 13px 2px 5px#EDF7FA;
+}
+
+.about-my-work__header {
+  font-size: 2.75rem; // 44px
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.about-my-work__text {
+  margin-bottom: 2.1em;
+}
+
+.about-my-work__download-resume {
+  font-weight: 500;
+  font-size: 1.25rem; //20px
+  color: #ffffff;
+  background-color: #ff6464;
+  border-radius: 0.2em;
+  padding: 0.85em 1em;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    outline: 0.1em solid @primary-text-color;
+  }
+}
+//-----------------------------------------------
+//recent-posts
+
+.recent-posts {
+  position: relative;
+  // display: flex;
+  // justify-content: start;
+  //background-color: #edf7fa;
+}
+
+.recent-posts-wrapper {
+  padding: 2em 0;
+  position: relative;
+  // background-color: #edf7fa;
+  z-index: 2;
+}
+
+.recent-posts__substrate {
+  background-color: #edf7fa;
+  position: absolute;
+  width: 98vw;
+  top: 0;
+  bottom: 0;
+  left: -8.9em;
+  //margin: 0;
+  z-index: 0;
+}
+
+.recent-posts__header {
+  display: flex;
+  justify-content: space-between;
+}
