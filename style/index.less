@@ -1,37 +1,74 @@
 @import './fonts.less';
 @import '/style/default-styles.less';
+@import './burger-menu.less';
 
-@padding-L-R-max: 9em;
-@padding-L-R-min: 2em;
+@padding-L-R-max: 9rem;
+@padding-L-R-min: 2rem;
+@super-container-color: #fff;
 
 .super-container {
   overflow-x: hidden;
   width: 100%;
   padding: 1.8em @padding-L-R-max;
-  border: 1px solid black;
+
+  background-color: @super-container-color;
 }
 
-@media (max-width: 43.75rem) {
+@media (max-width: 50.125rem) {
   .super-container {
     padding: 1.8em @padding-L-R-min;
+  }
+  .header .header__nav {
+    margin-right: @padding-L-R-min;
   }
   .recent-posts::before {
     left: -@padding-L-R-min !important;
   }
 }
 
+main {
+  margin-top: 7em;
+}
+
 //-----------------------------------------
 // header
+@media (min-width: 31.26rem) {
+  .header__nav__gamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 31.25rem) {
+  .header__nav .header__nav__list {
+    display: none;
+  }
+}
 
 .header {
-  margin-bottom: 9.1em;
+  background-color: @super-container-color;
+  //margin-bottom: 9.1em;
+  position: fixed;
+  z-index: 999;
+  height: 4em;
+  //width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .header__nav {
+  position: relative;
+  margin-top: 1em;
+  margin-right: @padding-L-R-max;
   display: flex;
   font-weight: 500;
   font-size: 1.25rem; //20px
   color: black;
+}
+
+.header__nav__item a {
+  text-decoration: none;
+  color: @primary-text-color;
 }
 
 .header__nav__list {
@@ -244,27 +281,24 @@
 
 @media (max-width: 31.25rem) {
   .featured-works {
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-.featured-works__tytle {
-  display: block;
-}
+  .featured-works__tytle {
+    display: block;
+  }
 
-.featured-works__item {
-  flex-direction: column;
-  .eatured-works__item__img {
-  width: 100%;
-  height: auto;
-  margin-right: 0;
-  margin-bottom: 1em;
-}
-}
-
-
-
+  .featured-works__item {
+    flex-direction: column;
+    .eatured-works__item__img {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 1em;
+    }
+  }
 }
 
 .featured-works {
