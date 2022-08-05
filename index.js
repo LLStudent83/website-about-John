@@ -10,11 +10,29 @@ function getBurgerMenu() {
 function hendlerClick(elementWithEvent, burgerElement) {
   const headerNavListElement =
     document.getElementsByClassName('header__nav__list')[0];
+  const header__nav__itemElements = document.getElementsByClassName('header__nav__item');
+  const mainElement = document.querySelector('main');
 
   if (elementWithEvent === burgerElement) {
+
+    for (let item of Array.from(header__nav__itemElements)) {
+      item.classList.toggle('header__nav__item-visible');
+      //item.style.fontSize = "1rem"
+    }
+
     headerNavListElement.classList.toggle('menu-visible');
+    mainElement.classList.toggle('main-longer');
+
+    
   } else if (headerNavListElement) {
     headerNavListElement.classList.remove('menu-visible');
+    mainElement.classList.remove('main-longer');
+
+    for (let item of Array.from(header__nav__itemElements)) {
+      item.classList.remove('header__nav__item-visible');
+
+    }
+
   }
 }
 

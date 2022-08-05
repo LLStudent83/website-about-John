@@ -10,7 +10,6 @@
   overflow-x: hidden;
   width: 100%;
   padding: 1.8em @padding-L-R-max;
-
   background-color: @super-container-color;
 }
 
@@ -28,6 +27,7 @@
 
 main {
   margin-top: 7em;
+  transition: margin-top 400ms;
 }
 
 //-----------------------------------------
@@ -40,24 +40,22 @@ main {
 
 @media (max-width: 31.25rem) {
   .header__nav .header__nav__list {
-    display: none;
+    position: absolute;
+    display: block;
   }
-}
+ }
 
 .header {
   background-color: @super-container-color;
-  //margin-bottom: 9.1em;
   position: fixed;
   z-index: 999;
   height: 4em;
-  //width: 100%;
   top: 0;
   left: 0;
   right: 0;
 }
 
 .header__nav {
-  position: relative;
   margin-top: 1em;
   margin-right: @padding-L-R-max;
   display: flex;

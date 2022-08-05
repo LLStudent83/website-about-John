@@ -1,3 +1,10 @@
+@import './fonts.less';
+
+.main-longer {
+  margin-top: 12em;
+  transition: margin-top 400ms;
+}
+
 @media (max-width: 31.25rem) {
   .header__nav__gamburger-container {
     cursor: pointer;
@@ -31,12 +38,40 @@
       top: 10px;
     }
   }
+
+  .header__nav__list .header__nav__item a {
+    color: white;
+  }
+
+  .header__nav__item {
+    text-align: center;
+    font-size: 0;
+    transition: font-size 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .header__nav__list .header__nav__item:nth-child(n + 2) {
+    margin-left: 0;
+  }
+
+  .super-container .header__nav .header__nav__list{
+    top: 100%;
+    width: 100%;
+    background-color: @primary-text-color;
+  }
+  
 }
-.super-container .header__nav .menu-visible {
-  display: block;
-  position: absolute;
-  bottom: -40px;
+
+.header__nav__item-visible {
+  padding: 1em 0;
+  font-size: 1rem;
+  transition: font-size 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
+
+// .super-container .header__nav .menu-visible {
+//   top: 100%;
+//   width: 100%;
+//   background-color: @primary-text-color;
+// }
 
 // @media (min-width: 31.26rem) {
 //   #menu-toggle,
