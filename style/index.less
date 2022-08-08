@@ -1,6 +1,7 @@
 @import './fonts.less';
 @import '/style/default-styles.less';
-@import './burger-menu.less';
+@import './header.less';
+@import './footer.less';
 
 @padding-L-R-max: 9rem;
 @padding-L-R-min: 2rem;
@@ -17,9 +18,7 @@
   .super-container {
     padding: 1.8em @padding-L-R-min;
   }
-  .header .header__nav {
-    margin-right: @padding-L-R-min;
-  }
+
   .recent-posts::before {
     left: -@padding-L-R-min !important;
   }
@@ -30,57 +29,8 @@ main {
   transition: margin-top 400ms;
 }
 
-//-----------------------------------------
-// header
-@media (min-width: 31.26rem) {
-  .header__nav__gamburger {
-    display: none;
-  }
-}
-
-@media (max-width: 31.25rem) {
-  .header__nav .header__nav__list {
-    position: absolute;
-    display: block;
-  }
- }
-
-.header {
-  background-color: @super-container-color;
-  position: fixed;
-  z-index: 999;
-  height: 4em;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.header__nav {
-  margin-top: 1em;
-  margin-right: @padding-L-R-max;
-  display: flex;
-  font-weight: 500;
-  font-size: 1.25rem; //20px
-  color: black;
-}
-
-.header__nav__item a {
-  text-decoration: none;
-  color: @primary-text-color;
-}
-
-.header__nav__list {
-  display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-}
-
-.header__nav__item {
-  list-style-type: none;
-}
-
-.header__nav__item:nth-child(n + 2) {
-  margin-left: 2em;
+.main-longer {
+  margin-top: 16em;
 }
 
 //---------------------------------------
@@ -356,50 +306,4 @@ main {
 
 .featured-works__item__about__text {
   line-height: 1.5em;
-}
-
-//-------------------------------------------------
-// footer
-
-footer {
-  margin-top: 5.437em;
-  padding: 3.187em 2em;
-  display: flex;
-  justify-content: center;
-}
-
-.subscription-panel {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.625em;
-  list-style: none;
-}
-
-.subscription-panel__item a {
-  &::before {
-    content: '';
-    display: block;
-    width: 2em;
-    height: 2em;
-    border-radius: 0.3em;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-}
-
-.subscription-panel__item__facebook::before {
-  background-image: url('../image/icons8-facebook-50.png');
-}
-
-.subscription-panel__item__instagram::before {
-  background-image: url('../image/icons8-instagram-50.png');
-}
-
-.subscription-panel__item__twitter::before {
-  background-image: url('../image/icons8-twitter-60.png');
-}
-
-.subscription-panel__item__linkedin::before {
-  background-image: url('../image/icons8-linkedin-50.png');
 }

@@ -1,0 +1,44 @@
+
+footer {
+    margin-top: 5.437em;
+    padding: 3.187em 2em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .subscription-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.625em;
+    list-style: none;
+  }
+  
+  .subscription-panel__item a {
+    &::before {
+      content: '';
+      display: block;
+      width: 2em;
+      height: 2em;
+      border-radius: 0.3em;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  
+  .subscription-panel__item__facebook::before {
+    background-image: url('../image/icons8-facebook-50.png');
+  }
+  
+  .subscription-panel__item__instagram::before {
+    background-image: url('../image/icons8-instagram-50.png');
+  }
+  
+  .subscription-panel__item__twitter::before {
+    background-image: url('../image/icons8-twitter-60.png');
+  }
+  
+  .subscription-panel__item__linkedin::before {
+    background-image: url('../image/icons8-linkedin-50.png');
+  }
+  
