@@ -1,69 +1,61 @@
-// @import './fonts.less';
-// @import '/style/default-styles.less';
-// @import './header.less';
-// @import './footer.less';
-
-@import './index.less';
+@import './fonts.less';
+@import '/style/default-styles.less';
+@import './header.less';
+@import './footer.less';
 
 .super-container {
-    //overflow-x: hidden;
-    width: 100%;
-    padding: 1.8em @padding-L-R-max;
-    background-color: @super-container-color;
+  width: 100%;
+  padding: 1.8em @padding-L-R-max;
+  background-color: @super-container-color;
+}
+
+@media (max-width: 50.125rem) {
+  .super-container {
+    padding: 1.8em @padding-L-R-min;
   }
-  
-  @media (max-width: 50.125rem) {
-    .super-container {
-      padding: 1.8em @padding-L-R-min;
-    }
-  
-  
+
   main {
     margin-top: 7em;
     transition: margin-top 400ms;
-  }
-  
-  .main-longer {
-    margin-top: 16em;
   }
 }
 
 //------------------------------------
 h1 {
-    font-weight: 700;
-font-size: 2.75rem;//44px
-margin-bottom: 1.5em;
+  font-weight: 700;
+  font-size: 2.75rem; //44px
+  margin-bottom: 1.5em;
 }
 
 .post-item {
-    padding-bottom: 1.812em;
-    border-bottom: 1px solid #E0E0E0;
-    margin-bottom: 2.187em;
+  padding-bottom: 1.812em;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 2.187em;
 }
 
 .post-item__tytle {
-    font-weight: 500;
-font-size: 1.875rem;//30px
-margin-bottom: 0.533em;
+  font-weight: 500;
+  font-size: 1.875rem; //30px
+  margin-bottom: 0.533em;
 }
 
 .post-item__about-post {
-    display: flex;
-    font-size: 1.25rem;//20px
-    margin-bottom: 0.75em;
+  display: flex;
+  font-size: 1.25rem; //20px
+  margin-bottom: 0.75em;
 }
 
 .post-item__about-post__date {
-    padding-right: 1.1em;
-    border-right: 1px solid @primary-text-color;
+  padding-right: 1.1em;
+  border-right: 1px solid @primary-text-color;
 }
 
 .post-item__about-post__tags {
-    padding-left: 1.1em;
-    color: #8695A4;
+  padding-left: 1.1em;
+  color: #8695a4;
 }
 
 .post-item__text {
-    text-align: justify;
-    line-height: 24px;
+  text-align: justify;
+  line-height: 24px;
 }
