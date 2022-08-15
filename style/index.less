@@ -3,26 +3,10 @@
 @import './header.less';
 @import './footer.less';
 
-.super-container {
-  overflow-x: hidden;
-  width: 100%;
-  padding: 1.8em @padding-L-R-max;
-  background-color: @super-container-color;
-}
-
 @media (max-width: 50.125rem) {
-  .super-container {
-    padding: 1.8em @padding-L-R-min;
-  }
-
   .recent-posts::before {
     left: -@padding-L-R-min !important;
   }
-}
-
-main {
-  margin-top: 7em;
-  transition: margin-top 400ms;
 }
 
 //---------------------------------------

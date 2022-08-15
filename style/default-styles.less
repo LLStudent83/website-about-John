@@ -1,11 +1,29 @@
 *,
 ::after,
 ::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @padding-L-R-max: 9rem;
 @padding-L-R-min: 2rem;
 @super-container-color: #fff;
+
+.super-container {
+  overflow-x: hidden;
+  width: 100%;
+  padding: 1.8em @padding-L-R-max;
+  background-color: @super-container-color;
+}
+
+main {
+  margin-top: 7em;
+  transition: margin-top 400ms;
+}
+
+@media (max-width: 50.125rem) {
+  .super-container {
+    padding: 1.8em @padding-L-R-min;
+  }
+}
